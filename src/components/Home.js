@@ -18,7 +18,7 @@ const Home = () => {
   return (
     <div id="Home-holder">
       <SearchBar />
-      <div id="List">
+      <div id="List" className="h-3/4 bg-primary">
         <h1>Stats by coins</h1>
         <div id="coin-grid">
           {loading && (<h2 className="text-green-700">Loading...</h2>)}

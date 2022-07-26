@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=David+Libre&family=Lato:wght@100;300;400&family=Permanent+Marker&family=Raleway:wght@200&family=Roboto:wght@100&family=Ubuntu:wght@300&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.search-container {
+    @apply flex flex-col md:flex-row justify-center md:justify-between w-3/4;
+}
+
+.search-button {
+    @apply w-3/4 my-3 mx-auto md:my-0 md:mx-0 md:w-1/6 shadow bg-primary rounded-full py-2 px-3;
+}

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { fetchData, filterCoins } from '../redux/home/home';
 import INITIAL_DATA from '../API/INITIAL_DATA';
+import logo from '../assets/logo.png';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -32,15 +33,21 @@ const SearchBar = () => {
   };
 
   return (
-    <div id="search-bar">
-      <input
-        type="text"
-        value={searchText}
-        placeholder="Search Coin"
-        onChange={handleFilterCoin}
-      />
+    <div id="search-bar" className="flex flex-col items-center p-4 justify-center gap-1 bg-filterBg">
+      <div className="overflow-hidden rounded my-3">
+        <img className="object-cover w-32 h-32" alt="Crypto Stats" src={logo} />
+      </div>
+      <div className="search-container">
+        <input
+          className="w-full md:w-3/4 rounded p-3 text-gray-600"
+          type="text"
+          value={searchText}
+          placeholder="Search Coin"
+          onChange={handleFilterCoin}
+        />
 
-      <button type="button" onClick={clearSearch}>Clear</button>
+        <button className="search-button" type="button" onClick={clearSearch}>Clear</button>
+      </div>
     </div>
   );
 };

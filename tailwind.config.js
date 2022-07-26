@@ -8,7 +8,11 @@ module.exports = {
     extend: {
       colors: {
         primary: "#4d6da7",
-        fontColor: "#FFFFFF"
+        filterBg: "#7fa8f6",
+        fontColor: "#FFFFFF",
+      },
+      fontFamily: {
+        body: ['Lato']
       }
     },
   },
