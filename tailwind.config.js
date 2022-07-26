@@ -9,10 +9,13 @@ module.exports = {
       colors: {
         primary: "#4d6da7",
         filterBg: "#7fa8f6",
+        filterBgEven: "#2d5092",
+        titleBar: "#234687",
         fontColor: "#FFFFFF",
       },
       fontFamily: {
-        body: ['Lato']
+        body: ['Lato'],
+        title: ['sans']
       }
     },
   },

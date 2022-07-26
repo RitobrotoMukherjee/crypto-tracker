@@ -11,3 +11,11 @@
 .search-button {
     @apply w-3/4 my-3 mx-auto md:my-0 md:mx-0 md:w-1/6 shadow bg-primary rounded-full py-2 px-3;
 }
+
+.coin-grid {
+    @apply flex flex-row flex-wrap justify-start md:w-full md:mx-auto;
+}
+
+.coin-grid-items {
+    @apply flex flex-col mb-1 md:mb-3 p-4 md:p-6 items-center justify-center flex-[0_0_50%] md:flex-[0_1_25%] odd:bg-filterBgEven cursor-alias;
+}

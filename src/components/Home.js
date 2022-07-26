@@ -3,8 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import SearchBar from './Search';
 import RandomId from '../helpers/Random';
 import CoinGridItem from './Home-components/CointGridItem';
-import { fetchData } from '../redux/home/home';
-import INITIAL_DATA from '../API/INITIAL_DATA';
+import { fetchApiData } from '../redux/home/home';
 
 const Home = () => {
   const dispatch = useDispatch();
@@ -12,16 +11,28 @@ const Home = () => {
 
   useEffect(() => {
     if (coinData.length === 0) {
-      dispatch(fetchData(INITIAL_DATA));
+      dispatch(fetchApiData());
     }
   }, [dispatch]);
   return (
     <div id="Home-holder">
       <SearchBar />
-      <div id="List" className="h-3/4 bg-primary">
-        <h1>Stats by coins</h1>
-        <div id="coin-grid">
-          {loading && (<h2 className="text-green-700">Loading...</h2>)}
+      <div id="List" className="h-full">
+        <h1 className="font-title uppercase pl-5 bg-titleBar">Stats by coins</h1>
+        {(!coinData.length && !loading) && (
+        <div className="flex flex-col items-center w-full h-screen">
+          <h2 className="text-2xl font-bold">No Data Found</h2>
+          <p className="text-lg font-title font-semibold">Clear filter and search something else</p>
+        </div>
+        )}
+
+        {loading && (
+        <div className="flex flex-col items-center w-full h-screen">
+          <h2 className="text-2xl font-bold">Loading...</h2>
+        </div>
+        )}
+        <div id="coin-grid" className="coin-grid">
+
           {!loading && coinData.map(({ icon, name, price }) => (
             <CoinGridItem
               key={RandomId()}

@@ -1,7 +1,7 @@
 import { NavLink } from 'react-router-dom';
 
 const Nav = () => (
-  <header className="p-2 shadow-lg">
+  <header className="p-2 shadow-lg w-full">
     <nav className="flex justify-between items-center">
       <div className="flex-[1_1_25%]">
         <NavLink to="/">

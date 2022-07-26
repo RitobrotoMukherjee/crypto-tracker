@@ -1,8 +1,7 @@
 /* eslint-disable max-len */
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchData, filterCoins } from '../redux/home/home';
-import INITIAL_DATA from '../API/INITIAL_DATA';
+import { fetchApiData, filterCoins } from '../redux/home/home';
 import logo from '../assets/logo.png';
 
 const SearchBar = () => {
@@ -19,7 +18,7 @@ const SearchBar = () => {
       });
       dispatch(filterCoins(filteredData));
     } else {
-      dispatch(fetchData(INITIAL_DATA));
+      dispatch(fetchApiData());
     }
   }, [searchText]);
 
@@ -33,7 +32,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div id="search-bar" className="flex flex-col items-center p-4 justify-center gap-1 bg-filterBg">
+    <div id="search-bar" className="h-1/4 flex flex-col items-center p-4 justify-center gap-1 bg-filterBg">
       <div className="overflow-hidden rounded my-3">
         <img className="object-cover w-32 h-32" alt="Crypto Stats" src={logo} />
       </div>
@@ -46,7 +45,7 @@ const SearchBar = () => {
           onChange={handleFilterCoin}
         />
 
-        <button className="search-button" type="button" onClick={clearSearch}>Clear</button>
+        <button className="search-button" type="button" onClick={clearSearch}>Clear Search</button>
       </div>
     </div>
   );
