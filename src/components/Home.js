@@ -1,36 +1,39 @@
+import { useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 import SearchBar from './Search';
-import RandomId, { getTillTwoDecimal } from '../helpers/Random';
+import RandomId from '../helpers/Random';
+import CoinGridItem from './Home-components/CointGridItem';
+import { fetchData } from '../redux/home/home';
+import INITIAL_DATA from '../API/INITIAL_DATA';
 
-const Home = () => (
-  <div id="Home-holder">
-    <SearchBar />
-    <div id="List">
-      <h1>Stats by coins</h1>
-      <div id="coin-grid">
-        <div id="Bitcoin">
-          <img src="https://static.coinstats.app/coins/1650455588819.png" alt="Bitcoin" />
-          <div data-type={RandomId}>
-            <h2>Bitcoin </h2>
-            <p>{ getTillTwoDecimal(1517.6944303804141) }</p>
-          </div>
-        </div>
-        <div id="Ethereum">
-          <img src="https://static.coinstats.app/coins/1650455629727.png" alt="Ethereum" />
-          <div datat-ype={RandomId}>
-            <h2>Ethereum</h2>
-            <p>{ getTillTwoDecimal(1517.6944303804141) }</p>
-          </div>
-        </div>
-        <div id="Tether">
-          <img src="https://static.coinstats.app/coins/1650455771843.png" alt="Tether" />
-          <div data-type={RandomId}>
-            <h2>Tether</h2>
-            <p>{ getTillTwoDecimal(1517.6944303804141) }</p>
-          </div>
+const Home = () => {
+  const dispatch = useDispatch();
+  const { loading, coinData } = useSelector((state) => state.home);
+
+  useEffect(() => {
+    if (coinData.length === 0) {
+      dispatch(fetchData(INITIAL_DATA));
+    }
+  }, [dispatch]);
+  return (
+    <div id="Home-holder">
+      <SearchBar />
+      <div id="List">
+        <h1>Stats by coins</h1>
+        <div id="coin-grid">
+          {loading && (<h2 className="text-green-700">Loading...</h2>)}
+          {!loading && coinData.map(({ icon, name, price }) => (
+            <CoinGridItem
+              key={RandomId()}
+              icon={icon}
+              name={name}
+              price={price}
+            />
+          ))}
         </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 export default Home;

@@ -1,8 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit';
 import home from './home/home';
 
-export default configureStore({
+const store = configureStore({
   reducer: {
     home,
   },
 });
+
+export default store;
