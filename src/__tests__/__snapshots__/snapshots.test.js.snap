@@ -1,0 +1,92 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main components snapshot testing Test if The Home Page renders correctly 1`] = `
+<div
+  id="Home-holder"
+>
+  <div
+    className="banner-container flex-col"
+    id="search-bar"
+  >
+    <div
+      className="overflow-hidden rounded my-3"
+    >
+      <img
+        alt="Crypto Stats"
+        className="object-cover w-32 h-32"
+        src="logo.png"
+      />
+    </div>
+    <div
+      className="search-container"
+    >
+      <input
+        className="w-full md:w-3/4 rounded p-3 text-gray-600"
+        onChange={[Function]}
+        placeholder="Search Coin"
+        type="text"
+        value=""
+      />
+      <button
+        className="search-button"
+        onClick={[Function]}
+        type="button"
+      >
+        Clear Search
+      </button>
+    </div>
+  </div>
+  <div
+    className="h-full"
+    id="List"
+  >
+    <h1
+      className="font-title uppercase pl-5 bg-titleBar"
+    >
+      Stats by coins
+    </h1>
+    <div
+      className="flex flex-col items-center w-full h-screen"
+    >
+      <h2
+        className="text-2xl font-bold"
+      >
+        Loading...
+      </h2>
+    </div>
+    <div
+      className="coin-grid"
+      id="coin-grid"
+    />
+  </div>
+</div>
+`;
+
+exports[`Main components snapshot testing Test if The Home Page renders correctly 2`] = `
+<div
+  className="flex flex-col items-center w-full h-screen"
+>
+  <h2
+    className="text-2xl font-bold"
+  >
+    Loading...
+  </h2>
+</div>
+`;
+
+exports[`Main components snapshot testing Test if The Home Page renders correctly 3`] = `
+<div
+  className="flex flex-col items-center w-full h-screen"
+>
+  <h2
+    className="text-2xl font-bold"
+  >
+    No Data Found
+  </h2>
+  <p
+    className="text-lg font-title font-semibold"
+  >
+    Test Snapshot No Data Found
+  </p>
+</div>
+`;
