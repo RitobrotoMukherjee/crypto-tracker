@@ -5,21 +5,21 @@
 @tailwind utilities;
 
 .banner-container {
-    @apply flex items-center p-4 justify-center gap-1 bg-filterBg min-h-1/4;
+  @apply flex items-center p-4 justify-center gap-1 bg-filterBg min-h-1/4;
 }
 
 .search-container {
-    @apply flex flex-col md:flex-row justify-center md:justify-between w-3/4;
+  @apply flex flex-col md:flex-row justify-center md:justify-between w-3/4;
 }
 
 .search-button {
-    @apply w-3/4 my-3 mx-auto md:my-0 md:mx-0 md:w-1/6 shadow bg-primary rounded-full py-2 px-3;
+  @apply w-3/4 my-3 mx-auto md:my-0 md:mx-0 md:w-1/6 shadow bg-primary rounded-full py-2 px-3;
 }
 
 .coin-grid {
-    @apply grid grid-flow-dense grid-cols-2 md:grid-cols-4 justify-start md:w-full md:mx-auto;
+  @apply grid grid-flow-dense grid-cols-2 md:grid-cols-4 justify-start md:w-full md:mx-auto;
 }
 
 .coin-grid-items {
-    @apply flex flex-col mb-1 md:mb-3 p-4 md:p-6 items-center justify-center cursor-pointer even:bg-filterBgEven;
+  @apply flex flex-col mb-1 md:mb-3 p-4 md:p-6 items-center justify-center cursor-pointer even:bg-filterBgEven;
 }

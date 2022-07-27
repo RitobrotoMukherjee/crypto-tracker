@@ -13,14 +13,19 @@
 - Redux
 - API
 
-## Live Demo (Coming Soon)
+## Live Demo (Click To View)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://preeminent-squirrel-53c5fe.netlify.app/)
 
-## Screen shots
-
-- ![](./screen/screen1.PNG)
-- ![](./screen/screen2.PNG)
+>
+>
+## Project view
+ ### Home view 
+![Mobile Home](./screen/HomeMobile.PNG)
+![Desktop Home](./screen/HomeDesktop.PNG)
+### Detail view
+![Detail Mobile](./screen/MobileDetailPage.PNG)
+![Detail Desktop](./screen/DesktopDetailPage.PNG)
 
 ## Built With
 
