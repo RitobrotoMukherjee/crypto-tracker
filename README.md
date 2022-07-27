@@ -38,7 +38,8 @@
 - ![](https://img.shields.io/badge/REACT-blue)
 - ![](https://img.shields.io/badge/REDUX-blue)
 
-
+## Video Explanation
+- **[Click To view loom video](https://www.loom.com/share/dfb314371e7945ed9caf8252374b1f54)**
 
 ## Setup
 
