@@ -16,6 +16,9 @@ module.exports = {
       fontFamily: {
         body: ['Lato'],
         title: ['sans']
+      },
+      minHeight: {
+        '1/4': '25%',
       }
     },
   },

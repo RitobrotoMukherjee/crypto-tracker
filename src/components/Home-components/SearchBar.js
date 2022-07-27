@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchApiData, filterCoins } from '../redux/home/home';
-import logo from '../assets/logo.png';
+import { fetchApiData, filterCoins } from '../../redux/home/home';
+import TopBanner from '../TopBanner';
+import logo from '../../assets/logo.png';
 
 const SearchBar = () => {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ const SearchBar = () => {
   };
 
   return (
-    <div id="search-bar" className="h-1/4 flex flex-col items-center p-4 justify-center gap-1 bg-filterBg">
+    <TopBanner flex="flex-col">
       <div className="overflow-hidden rounded my-3">
         <img className="object-cover w-32 h-32" alt="Crypto Stats" src={logo} />
       </div>
@@ -46,7 +47,7 @@ const SearchBar = () => {
 
         <button className="search-button" type="button" onClick={clearSearch}>Clear Search</button>
       </div>
-    </div>
+    </TopBanner>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import SearchBar from './Search';
+import SearchBar from './Home-components/SearchBar';
 import RandomId from '../helpers/Random';
 import CoinGridItem from './Home-components/CointGridItem';
 import { fetchApiData } from '../redux/home/home';
@@ -33,9 +33,12 @@ const Home = () => {
         )}
         <div id="coin-grid" className="coin-grid">
 
-          {!loading && coinData.map(({ icon, name, price }) => (
+          {!loading && coinData.map(({
+            id, icon, name, price,
+          }) => (
             <CoinGridItem
               key={RandomId()}
+              id={id}
               icon={icon}
               name={name}
               price={price}
