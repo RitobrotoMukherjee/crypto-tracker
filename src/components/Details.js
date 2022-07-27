@@ -1,10 +1,12 @@
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useParams } from 'react-router-dom';
 import TopBanner from './TopBanner';
+import DetailData from './Details-components/DetailData';
 import { getTillTwoDecimal } from '../helpers/Random';
-// import { DETAILS_DATA } from '../API/INITIAL_DATA';
 
 const Details = () => {
   const [searchParams] = useSearchParams();
+  const params = useParams();
+
   const name = searchParams.get('name');
   const price = +searchParams.get('price');
   const icon = searchParams.get('icon');
@@ -21,6 +23,7 @@ const Details = () => {
       </TopBanner>
       <div id="List" className="h-full">
         <h1 className="font-title uppercase pl-5 bg-titleBar">{`Stats Of ${name}`}</h1>
+        <DetailData coinId={params.coinId} />
       </div>
     </div>
   );

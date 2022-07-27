@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+import NoDataFound from './NoDataFound';
+import Loading from './Loading';
 import SearchBar from './Home-components/SearchBar';
 import RandomId from '../helpers/Random';
 import CoinGridItem from './Home-components/CointGridItem';
@@ -19,18 +21,10 @@ const Home = () => {
       <SearchBar />
       <div id="List" className="h-full">
         <h1 className="font-title uppercase pl-5 bg-titleBar">Stats by coins</h1>
-        {(!coinData.length && !loading) && (
-        <div className="flex flex-col items-center w-full h-screen">
-          <h2 className="text-2xl font-bold">No Data Found</h2>
-          <p className="text-lg font-title font-semibold">Clear filter and search something else</p>
-        </div>
-        )}
+        {(!coinData.length && !loading) && (<NoDataFound text="Clear Search, To View All Data" />)}
 
-        {loading && (
-        <div className="flex flex-col items-center w-full h-screen">
-          <h2 className="text-2xl font-bold">Loading...</h2>
-        </div>
-        )}
+        {loading && (<Loading />)}
+
         <div id="coin-grid" className="coin-grid">
 
           {!loading && coinData.map(({

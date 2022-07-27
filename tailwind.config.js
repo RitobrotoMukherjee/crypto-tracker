@@ -6,6 +6,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'xs': '300px',
+      },
       colors: {
         primary: "#4d6da7",
         filterBg: "#7fa8f6",
