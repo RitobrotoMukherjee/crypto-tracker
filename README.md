@@ -15,7 +15,7 @@
 
 ## Live Demo (Click To View)
 
-[Live Demo Link](https://preeminent-squirrel-53c5fe.netlify.app/)
+[Live Demo Link](https://crypto-tracker-rito.netlify.app/)
 
 >
 >
